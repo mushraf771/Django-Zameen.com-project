@@ -1,0 +1,32 @@
+
+.section-main {
+  width: 100%;
+  height: 100vh;
+  background: url('../img/banner-4.jpg')
+    no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 100px;
+  position: relative;
+  top: 50%;
+ /* border: 1px solid green; */
+}
+.table-container-main{
+    position:absolute;
+    top: 60%;
+    left: 50%;
+    /* background: rgb(129, 26, 26); */
+    width: 100%;
+    height: 100vh;
+    transform:translate(-50%,-50%);
+}
+.signin-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%)
+}

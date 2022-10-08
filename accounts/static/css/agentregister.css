@@ -1,0 +1,53 @@
+
+.section-main {
+  width: 100%;
+  height: 100vh;
+  background: url(https://zameenblog.s3.amazonaws.com/blog/wp-content/uploads/2019/04/Cover-1440x625-1.jpg)
+    no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 100px;
+  position: relative;
+  top: 50%;
+ /* border: 1px solid green; */
+}
+.table-container-main{
+    position:absolute;
+    top: 80%;
+    left: 50%;
+    /* background: rgb(129, 26, 26); */
+    width: 100%;
+    height: 100vh;
+    transform:translate(-50%,-50%);
+}
+.form-text-container{
+    float: left;
+    background: #fff;
+    position:relative;
+}
+
+.form-container{
+background: #fff;
+border-top: 5px solid #33A137;
+float: right;
+}
+.ndblock{
+  height: 120vh;
+  width: 100%;
+  background: url(https://img.wallpapersafari.com/desktop/1536/864/64/55/7utY0A.jpg)
+no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 100px;
+  z-index: -99999;
+  /* position: relative;
+  top: 50%; */
+}

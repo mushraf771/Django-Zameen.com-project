@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" type="image/png" sizes="32x32" href="https://www.zameen.com/assets/favicon-32x32.d993255dfd39106b5ea27132ada5daf5.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://www.zameen.com/assets/favicon-16x16.8ca5a2688a70096871086b2ca87b3da8.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://www.zameen.com/assets/apple-touch-icon.1dbbcc9e3f454ad14d4fd0f5a25d37a3.png">
+  <link rel="mask-icon" href="/assets/safari-pinned-tab.58a38fccbf7317078b2cb17603f6cdc9.svg" color="#3ba83b">
+  <title>{% block title%} Base {% endblock title%}</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta property="og:title" content="Pakistan Property Real Estate - Sell Buy Rent Homes &amp; Properties In Pakistan Real Estate - Zameen.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  {% load static %}
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" />
+  <!-- custom css -->
+  {% block css %}
+  {% endblock css %}
+  <!-- carousel -->
+  <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <!-- font awsome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+    integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+
+<body>
+  <div class="scrollTop" onClick="scrollToTop()"></div>
+  <!-- main nav block -->
+  
+  {% block navbar %}
+  <header class="header form-inline">
+    <a href="{% url 'home' %}" class="brand"><img
+        src="https://9bfb164cc130fa80219f-0951aea74e48cd703ee2eb5ca90acd24.ssl.cf1.rackcdn.com/partners_zam_logo.png"
+        alt=""></a>
+    <div class="menu">
+      <div class="btn">
+        <i class="fa-solid fa-xmark close-btn"></i>
+      </div>
+      <a href="{% url 'homes' %}">Homes</a>
+      <a href="{% url 'rent' %}">Shops</a>
+      <a href="{% url 'plots' %}">Plots</a>
+    
+      <a href="{% url 'mymapp' %}">Maps</a>
+      <a href="{% url 'addproperty' %}">Add Property</a>
+      {% comment %} <a href="{% url '' %}">Add Property</a> {% endcomment %}
+      {% if request.user.is_authenticated %}
+      <a  class="dropdown profile-txt"id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class=""><i class="fa fa-user"></i> &nbsp;{{request.user}}</span></a>
+      <div class="dropdown-menu profile-dropdown-item my-2">
+      <a class="dropdown-item " href="{% url 'home' %}">Profile</a>
+      <a class="dropdown-item" href="{% url 'passwordchange' %}">Change Password</a>
+      <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+  </div>
+
+</div>
+</a>
+      {% comment %} <a href="{% url 'index' %}" class=""> </a> {% endcomment %}
+      {% else %}
+      <a href="{% url 'sign-in' %}">Sign In </a>
+      <!-- <a href="#">Sign Up</a>  -->
+        {% endif %}
+    </div>
+    <div class="btn mx-3">
+      <i class="fa-solid fa-bars menu-btn"></i>
+    </div>
+    <!-- header end -->
+  </header>
+  {% endblock navbar %}
+  {% block main_nav %}
+  <section class="section-main">
+    <div class="content p-3">
+      <h4 class="text-center">Find most searched locations in Pakistan</h4>
+      <div class="btn-form  my-3">
+        <a href="#" class="bts ">Buy </a>
+        <a href="#" class="bts ">Rent </a>
+        <a href="#" class="bts  ">Projects </a>
+      </div>
+      <div class="form-section ">
+        <form class="form-inline">
+
+          <label class="sr-only" for="inlineFormInputName2">City</label>
+          <input type="text" class="form-control-lg mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Lahore">
+
+          <label class="sr-only" for="inlineFormInputGroupUsername2">Location</label>
+          <div class="input-group mb-2 mr-sm-2">
+            <!-- <div class="input-group-prepend">
+              <div class="input-group-text">@</div>
+            </div> -->
+            <input type="text" class="form-control-lg  " id="inlineFormInputGroupUsername2" placeholder="Pakistan">
+          </div>
+
+          <div class="form-check mb-2 mr-sm-2">
+            <!-- <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+            <label class="form-check-label" for="inlineFormCheck">
+              Remember me
+            </label> -->
+          </div>
+
+          <button type="submit" class="btn-submit btn-lg mb-2">Find</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <!-- endblock main nav -->
+  {% endblock main_nav %}
+
+  <!-- searched_history section -->
+  {% block searched_history%}
+  
+  
+  {% endblock searched_history %}
+  <!-- searched section -->
+  {% block searched %}
+  
+  
+  {% endblock searched %}
+
+  <!-- block content -->
+  {% block content %}
+  <section class="section-two">
+
+  </section>
+  {% endblock content %}
+  </div>
+  <!-- endblock content -->
+{% block 2ndblock %}
+{% endblock 2ndblock %}
+  <!-- block Footer -->
+  <div class="container_fluid">
+    {% block footer %}
+    <section class="container">
+
+      <div class="get-app-container">
+        <div class="get-container-app-main">
+          <div class="lazyload-wrapper ">
+            <div class="main-div">
+              <div class="main-text">
+                <div class="get-the-zameen-app">Get the Zameen App</div>
+                <div class="get-the-zameen-app-text">Buy and Rent Property faster and better using our app.
+                </div>
+              </div>
+              <div class="get-app-icon">
+                <div class="div-icon"><a href="https://itunes.apple.com/us/app/zameen/id903880271?mt=8"
+                    title="Open iTunes to Download and Install this App"
+                    aria-label="Open ITunes to Download and Install this App">
+                    <div class="div-icon-a"></div>
+                  </a><a href="https://play.google.com/store/apps/details?id=com.zameen.zameenapp"
+                    title="Open Google Play to Download and Install this App"
+                    aria-label="Open Google Play to Download and Install this App">
+                    <div class="div-icon-a-a"></div>
+                  </a></div>
+                <div class="qr-main">
+                  <div class="qr-div">
+                    <div class="qr-get-text">Scan the QR code to get the app</div>
+                    <div class="qr-icon-arrow"></div>
+                  </div>
+                  <div class="qr-icon-qr"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- baneer end -->
+    </section>
+    <section class="">
+      <div class="partener-div-1">
+        <div class="partener-div-2 container">
+          <div class="partener-div-3">
+            <div class="container-div">
+              <div class="partener-heading">Our Home Partners</div>
+              <div class="row text-center d-flex justify-content-center ">
+                <div class="col-4 col-md-2">
+                  <span class="partner-span"><img
+                      src="https://www.zameen.com/assets/iconHblBank_noinline.45a04818d83e94a023a72df539ae3efb.svg"
+                      alt="HBL Bank" class="partener-img"></span>
+                </div>
+                <div class="col-4 col-md-2">
+                  <span class="partner-span"><img
+                      src="https://www.zameen.com/assets/iconScbBank_noinline.e4e01298f43f797fdf269e5047d43618.svg"
+                      alt="HBL Bank" class="partener-img"></span>
+                </div>
+                <div class="col-4 col-md-2">
+                  <span class="partner-span"><img
+                      src="https://www.zameen.com/assets/iconJSBank_noinline.ed9d110319583e9f109104a371362874.svg"
+                      alt="HBL Bank" class="partener-img"></span>
+                </div>
+                <div class="col-4 col-md-2">
+                  <span class="partner-span"><img
+                      src="https://www.zameen.com/assets/iconHbfcBank_noinline.e38973a19243c9020ae8b0970c382322.svg"
+                      alt="HBL Bank" class="partener-img"></span>
+                </div>
+                <div class="col-4 col-md-2">
+                  <span class="partner-span"><img
+                      src="https://www.zameen.com/assets/iconHabibBank_noinline.315b6caede4a9e6b43a4db4b7007b4df.svg"
+                      alt="HBL Bank" class="partener-img"></span>
+                </div>
+                <div class="col-4 col-md-2">
+                  <span class="partner-span"><img
+                      src="https://www.zameen.com/assets/iconMCBBank_noinline.d28ad8d5728926601b6a885af7b731a3.svg"
+                      alt="HBL Bank" class="partener-img"></span>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- partener-section end -->
+    </section>
+
+    <footer class="footer-container">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-3">
+            <div class="ed8bda1d">
+              <ul class="list-unstyled ">
+                <li class="footer-li  ">
+                  <h4 class="footer-li-head ">Company</h4>
+                </li>
+                <li class="footer-li "><a href="/about/aboutus.html" class="_09ab7d3f" aria-label="About us">About
+                    us</a></li>
+                <li class="footer-li "><a href="{% url 'contact' %}" class="_09ab7d3f" aria-label="Contact us">Contact
+                    us</a></li>
+                <li class="footer-li "><a href="https://jobs.zameen.com/" class="_09ab7d3f" aria-label="Jobs">Jobs</a>
+                </li>
+                <li class="footer-li "><a href="/help/index.html" class="_09ab7d3f" aria-label="Help and support">Help
+                    &amp; Support</a></li>
+                <li class="footer-li "><a href="/advertise/index.html" class="_09ab7d3f"
+                    aria-label="Advertise on zameen">Advertise on Zameen</a></li>
+                <li class="footer-li "> <a href="/terms.html" class="_09ab7d3f" aria-label="Terms">Terms of Use</a></li>
+              </ul>
+
+            </div>
+          </div>
+          <!-- 2nd row -->
+          <div class="col-12 col-md-3">
+            <div class="ed8bda1d">
+              <ul class="list-unstyled ">
+                <li class="footer-li  ">
+                  <h4 class="footer-li-head">Connect</h4>
+                </li>
+                <li class="footer-li "><a href="/blog/" class="_09ab7d3f" aria-label="Blog">Blog</a></li>
+                <li class="footer-li "><a href="/news" class="_09ab7d3f" aria-label="News">News</a></li>
+                <li class="footer-li "><a href="/forum/" class="_09ab7d3f" aria-label="Forum">Forum</a></li>
+                <li class="footer-li "><a href="https://expo.zameen.com" class="_09ab7d3f" aria-label="Expo">Expo</a>
+                </li>
+                <li class="footer-li "><a href="/agents.html" class="_09ab7d3f" aria-label="Real estate agents">Real
+                    Estate Agents</a></li>
+                <li class="footer-li "><a href="/add_property_single.html" class="_09ab7d3f"
+                    aria-label="Add property">Add Property</a></li>
+              </ul>
+
+            </div>
+          </div>
+          <!-- 3rd row -->
+          <div class="col-12 col-md-3">
+            <div class="ed8bda1d">
+              <ul class="list-unstyled ">
+                <li class="footer-li ">
+                  <h4 class="footer-li-head">Head Office</h4>
+                </li>
+                <li class="footer-li d-flex ">
+                  <div><i class="fa-solid fa-location-dot px-2"></i></div>
+                  <div class="_9ff5faa9">Pearl One, 94-B/I, MM Alam Road,<br>
+                    Gulberg III, Lahore, Pakistan</div>
+                </li>
+                <li class="footer-li d-flex my-2">
+                  <div><i class="fa-solid fa-phone px-2"></i></div>
+                  <div class="_9ff5faa9 _02e9ff75 _27fee0c9">0800-ZAMEEN (92633)</div>
+                </li>
+                <li class="footer-li d-flex my-2 ">
+                  <div><i class="fa-solid fa-envelope px-2"></i></div>
+                  <div class="_9ff5faa9"> <a href="/contactus.html" class="_09ab7d3f" aria-label="Email us">
+                      Email Us
+                    </a></div>
+                </li>
+
+              </ul>
+
+            </div>
+          </div>
+          <!-- 4th row -->
+          <div class="col-12 col-md-3">
+            <div class="ed8bda1d">
+              <ul class="list-unstyled ">
+                <li class="footer-li  ">
+                  <h4 class="footer-li-head">Roshan Digital Account</h4>
+                </li>
+                <li class="footer-li  ">
+                  <a href="/partners/roshan-digital-account" class=""><img
+                      src="https://zameen-assets-prod-static.s3-eu-west-1.amazonaws.com/legacy/images/roshan_digital_acct_logo1_1.svg"
+                      class="px-4 w-150 roshan-digital" alt="roshan"></a>
+                </li>
+                <li class="footer-li ">
+                  <h4 class=" footer-li-head">Get Connected</h4>
+                </li>
+                <li class="footer-li d-flex flex-wrap  ">
+
+                  <div><a href="https://www.facebook.com/ZameenPK" title="Follow us on Facebook"
+                      aria-label="Follow us on facebook">
+                      <div class=" footer-icon"><img
+                          src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/800px-2021_Facebook_icon.svg.png"
+                          alt=""></div>
+                    </a></div>
+                  <div><a href="https://www.instagram.com/zameenpk" title="Follow us on Instagram"
+                      aria-label="Follow us on instagram">
+                      <div class="footer-icon"><img
+                          src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/800px-Instagram_logo_2016.svg.png"
+                          alt=""></div>
+                    </a></div>
+                  <div><a href="https://www.youtube.com/channel/UCd5zTrqwM1lSd1KyeEZcswA" title="Follow us on YouTube"
+                      aria-label="Follow us on youtube">
+                      <div class="footer-icon"><img
+                          src="https://thumbs.dreamstime.com/b/youtube-round-icon-logo-white-background-editable-vector-illustration-youtube-icon-logo-141050377.jpg"
+                          alt=""></div>
+                    </a></div>
+                  <div><a href="https://twitter.com/ZameenProperty" title="Follow us on Twitter"
+                      aria-label="Follow us on twitter">
+                      <div class="footer-icon"><img
+                          src="https://seeklogo.com/images/T/twitter-icon-circle-blue-logo-94339974C6-seeklogo.com.png"
+                          alt=""></div>
+                    </a></div>
+                  <div><a href="https://pk.linkedin.com/company/zameen-com" title="Follow us on LinkedIn"
+                      aria-label="Follow us on linkedin">
+                      <div class="footer-icon"><img
+                          src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/800px-LinkedIn_logo_initials.png"
+                          alt=""></div>
+                    </a></div>
+
+                </li>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <h4 class="footer-li">
+          <div class="">
+            <div class="">
+              <div class="">© Copyright 2007 - 2022 Zameen.com. All Rights Reserved</div>
+            </div>
+          
+          </div>
+        </h4>
+      </div>
+
+    </footer>
+    {% endblock footer %}
+  </div>
+  <!-- end block Footer -->
+  <!-- jquery slider -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="{% static 'js/owl.carousel.min.js' %}" relative="text/javascript"></script>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <!-- my script -->
+  <script type="text/javascript" src="{% static 'js/navbar_effect.js' %}"></script>
+
+</body>
+
+</html>

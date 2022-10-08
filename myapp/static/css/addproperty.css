@@ -1,0 +1,58 @@
+.section-main {
+  width: 100%;
+  height: 100vh;
+  background: url('../img/banner-3.jpg')
+    no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 100px;
+  position: relative;
+  /* top: 50%; */
+   /* border: 3px solid green; */
+}
+.table-container-main{
+    position:absolute;
+    top: 60%;
+    left: 50%;
+    /* background: rgb(129, 26, 26); */
+    width: 100%;
+    height: 100vh;
+    transform:translate(-50%,-50%);
+    /* z-index: 99999; */
+}
+.form-container{
+background: #fff;
+/* border-top: 5px solid #33A137; */
+}
+.ndblock{
+  height: 100vh;
+  width: 100%;
+  background: url(https://img.wallpapersafari.com/desktop/1536/864/64/55/7utY0A.jpg)
+no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 100px;
+  z-index: -99999;
+  /* position: relative;
+  top: 50%; */
+}
+.add-head{
+    font-size: 30px;
+    color: #33A137;
+}
+a{
+    text-decoration: none;
+    color: rgb(23, 127, 245)
+}
+a:hover{
+    text-decoration: none;
+    /* color: rgb(23, 127, 245) */
+}

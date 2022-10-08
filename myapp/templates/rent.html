@@ -1,0 +1,196 @@
+{% extends 'base.html' %} {% block title %} Pakistan Property Real Estate - Sell Buy Rent Homes &amp; Properties In
+Pakistan Real Estate - Zameen.com{% endblock title %}
+{% block main_nav %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/rent.css' %}" />
+{% endblock css %}
+
+<div class="scrollTop" onClick="scrollToTop()"></div>
+<!-- main nav block -->
+<section class="section-main">
+    <div class="content p-3">
+        <h4 class="text-center">Search Shops for sale in Pakistan</h4>
+        <div class="btn-form  my-3">
+            <a href="#" class="bts ">Buy </a>
+            <a href="#" class="bts ">Rent </a>
+            <a href="#" class="bts  ">Projects </a>
+        </div>
+        <div class="form-section ">
+            <form class="form-inline">
+
+                <label class="sr-only" for="inlineFormInputName2">City</label>
+                <input type="text" class="form-control-lg mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Lahore">
+
+                <label class="sr-only" for="inlineFormInputGroupUsername2">Location</label>
+                <div class="input-group mb-2 mr-sm-2">
+                    <!-- <div class="input-group-prepend">
+            <div class="input-group-text">@</div>
+          </div> -->
+                    <input type="text" class="form-control-lg  " id="inlineFormInputGroupUsername2"
+                        placeholder="Pakistan">
+                </div>
+
+                <div class="form-check mb-2 mr-sm-2">
+                    <!-- <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+          <label class="form-check-label" for="inlineFormCheck">
+            Remember me
+          </label> -->
+                </div>
+
+                <button type="submit" class="btn-submit btn-lg mb-2">Find</button>
+            </form>
+        </div>
+    </div>
+</section>
+<!-- endblock main nav -->
+{% endblock main_nav %}
+
+<!-- searched_history section -->
+{% block searched_history%}
+<div class="container-fluid">
+    <div class="spacer"></div>
+    <div class="container">
+        <div class="heading text-center m-2"><i class="fa-solid fa-clock-rotate-left"></i> &nbsp; Your Last Searches
+        </div>
+        <div class="spacer"></div>
+        <div class="row ">
+            <!-- 1st row -->
+            <div class="col-12 col-md-4 cols-search">
+                <a href="" class="">
+                    <div class="search-box">
+                        <div class="">
+                            <span class="search-title"> you searched it</span> <br>
+                            <span class="search-cat">all Houses</span>
+                        </div>
+                        <div class="search-arrow text-center"> <i class="fa-solid fa-angle-right"></i></div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- 2nd row -->
+            <div class="col-12 col-md-4 cols-search ">
+                <a href="" class="">
+                    <div class="search-box">
+                        <div class="">
+
+                            <span class="search-title"> you searched it</span> <br>
+                            <span class="search-cat">all Houses</span>
+                        </div>
+                        <div class="search-arrow text-center"> <i class="fa-solid fa-angle-right"></i></div>
+                    </div>
+                </a>
+            </div>
+            <!-- 3rd row -->
+            <div class="col-12 col-md-4  cols-search">
+                <a href="" class="">
+                    <div class="search-box">
+                        <div class="">
+
+                            <span class="search-title"> you searched it</span> <br>
+                            <span class="search-cat">all Houses</span>
+                        </div>
+                        <div class="search-arrow text-center"> <i class="fa-solid fa-angle-right"></i></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock searched_history %}
+<!-- searched block -->
+{% block searched %}
+<section class="searched container-fluid">
+    <div class="spacer"></div>
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Library</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Data</li>
+            </ol>
+        </nav>
+        <div class="heading-searches my-2">
+            <span> 1 Plots for Sale in Nishat Colony</span>
+            <span class="btn btn-light"> <i class="fa-regular fa-star"></i> &nbsp; save search</span>
+        </div>
+    </div>
+    <div class="spacer"></div>
+    <!-- search resault row -->
+    <div class="container">
+        <div class="col-12 search-nav">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link" href="#!">Active</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                        aria-haspopup="true" aria-expanded="false">
+                        Dropdown</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#!">Action</a>
+                        <a class="dropdown-item" href="#!">Another action</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="container">
+            <div class="spacer"></div>
+            <div class="row  shadow rounded ">
+                
+                <div class="col-12 col-md-5 bread-cols">
+                    <div class="p-2 map-row-background">
+                        <picture class="">
+                            <source type="image/webp"
+                                srcset="https://images.zameen.com/smap/400/300/31.496091/74.393234/image.jpeg?quality=80&amp;imageformat=jpeg">
+                            <img role="presentation" alt="10 Marla Plot for Sale in Nishat Colony"
+                                title="10 Marla Plot for Sale in Nishat Colony" aria-label="Listing photo"
+                                src="https://images.zameen.com/smap/400/300/31.496091/74.393234/image.jpeg?quality=80&amp;imageformat=jpeg"
+                                class="map-img">
+                        </picture>
+                    </div>
+                </div>
+                <div class="col-12 col-md-7 bread-cols2">
+                    <div class="p-2 map-row-background ">
+                        <p>
+                            <span class="pkr">pkr</span><span class="price"> 1.5 Crore </span>
+                        </p>
+
+                        <span class="addr"> <i> Nishat colouny Lahore </i></span>
+<br>
+
+                        <span class="mrl text-bold">10 Marla</span>
+                        <br>
+                        <span class="mrl"><a href="#">10 marla plot in nishat colouny</a></span>
+                    
+                    <br>
+                    <span class="mrl-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates doloribus consectetur quo perferendis suscipit nemo numquam odio molestiae inventore et, eos dolor eaque provident at.</span>
+                
+                <br>
+                <p class="update-information text-muted  py-2"> added 6 mont ago (updated 3 days ago)</p>
+            <div class="footer-btn text-center">
+                <div class="mx-3">
+                    <button type="button" class="btn btn-outline-success"> call</button>
+                </div>
+                <div class="mx-3">
+                    <button type="button" class="btn btn-outline-success"> Email</button>
+                </div>
+            </div>
+            </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+<!-- endblock searched -->
+{% endblock searched %}
+
+{% block content %}
+
+
+{% endblock content %}

@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% block main_nav %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/addproperty.css' %}">
+{% load crispy_forms_tags %}
+{% endblock css %}
+
+{% endblock main_nav %}
+{% block content %}
+<section class="section-main">
+  <div class="container table-container-main mx-auto ">
+    <form action=""enctype="multipart/form-data" method="POST"  novalidate class="form-container p-4 bg-light shadow rounded">
+    <div class="col-12 text-center text-capitalize h3 add-head pb-3">Add Property</div>
+      {% csrf_token %}
+      <table>
+        <!-- <div class="col-12 bg-success"> PROPERTY TYPE AND LOCATION</div> -->
+        <div class="form-row">
+          <div class="form-group col-md-6 mb-0">
+            {{ form.property_purpose|as_crispy_field }}
+          </div>
+          <div class="form-group col-md-6 mb-0">
+            {{ form.property_types|as_crispy_field }}
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6 mb-0">
+            {{ form.aria_unit|as_crispy_field }}
+          </div>
+          <div class="form-group col-md-6 mb-0">
+            {{ form.aria_size|as_crispy_field }}
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6 mb-0">
+            {{ form.price|as_crispy_field }}
+          </div>
+          <div class="form-group col-md-6 mb-0">
+            {{ form.instalment|as_crispy_field }}
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6 mb-0">
+            {{ form.listining_expiry|as_crispy_field }}
+          </div>
+          <div class="form-group col-md-6 mb-0">
+            {{ form.property_name|as_crispy_field }}
+          </div>
+        </div>
+        {{ form.property_description|as_crispy_field }}
+        {% comment %} {{ form.agent_id|as_crispy_field }} {% endcomment %}
+        <div class="form-row">
+          <div class="form-group col-md-6 mb-0">
+            {{ form.property_type_img|as_crispy_field }}
+          </div>
+          <div class="form-group col-md-6 mb-0">
+            {{ form.property_docunments|as_crispy_field }}
+          </div>
+        </div>
+        <div class="form-row pt-3">
+          <div class="form-group col-md-6 mb-0 py-2">
+            <button type="submit" class="btn btn-primary btn-lg btn-block form-control p-2">Submit Property</button>
+          </div>
+          <div class="form-group col-md-6 mb-0 py-2">
+            <a href="{% url 'appointment' %}"><button type="button" class="btn btn-success form-control btn-lg btn-block p-2">Book an Appointment</button></a>
+          </div>
+        </div>
+    </form>
+    </table>
+    </form>
+  </div>
+</section>
+{% endblock content %}
+{% block 2ndblock %}
+<section class="ndblock">
+
+</section>
+{% endblock 2ndblock %}
